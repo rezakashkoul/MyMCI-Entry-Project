@@ -12,6 +12,9 @@
 		F73ECDCE26D6BE9E00FD51CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F73ECDCC26D6BE9E00FD51CD /* Main.storyboard */; };
 		F73ECDD026D6BE9F00FD51CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F73ECDCF26D6BE9F00FD51CD /* Assets.xcassets */; };
 		F73ECDD326D6BE9F00FD51CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F73ECDD126D6BE9F00FD51CD /* LaunchScreen.storyboard */; };
+		F77153CE26D7C82D00B6D459 /* PoppinsLatin-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F77153CB26D7C82C00B6D459 /* PoppinsLatin-Medium.ttf */; };
+		F77153CF26D7C82D00B6D459 /* PoppinsLatin-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F77153CC26D7C82D00B6D459 /* PoppinsLatin-Bold.ttf */; };
+		F77153D026D7C82D00B6D459 /* PoppinsLatin-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F77153CD26D7C82D00B6D459 /* PoppinsLatin-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		F73ECDCF26D6BE9F00FD51CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F73ECDD226D6BE9F00FD51CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F73ECDD426D6BE9F00FD51CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F77153CB26D7C82C00B6D459 /* PoppinsLatin-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoppinsLatin-Medium.ttf"; sourceTree = "<group>"; };
+		F77153CC26D7C82D00B6D459 /* PoppinsLatin-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoppinsLatin-Bold.ttf"; sourceTree = "<group>"; };
+		F77153CD26D7C82D00B6D459 /* PoppinsLatin-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoppinsLatin-Light.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,9 @@
 				F73ECDCC26D6BE9E00FD51CD /* Main.storyboard */,
 				F73ECDCF26D6BE9F00FD51CD /* Assets.xcassets */,
 				F73ECDD126D6BE9F00FD51CD /* LaunchScreen.storyboard */,
+				F77153CC26D7C82D00B6D459 /* PoppinsLatin-Bold.ttf */,
+				F77153CD26D7C82D00B6D459 /* PoppinsLatin-Light.ttf */,
+				F77153CB26D7C82C00B6D459 /* PoppinsLatin-Medium.ttf */,
 				F73ECDD426D6BE9F00FD51CD /* Info.plist */,
 			);
 			path = "MyMCI Entry Project";
@@ -123,6 +132,9 @@
 			files = (
 				F73ECDD326D6BE9F00FD51CD /* LaunchScreen.storyboard in Resources */,
 				F73ECDD026D6BE9F00FD51CD /* Assets.xcassets in Resources */,
+				F77153D026D7C82D00B6D459 /* PoppinsLatin-Light.ttf in Resources */,
+				F77153CE26D7C82D00B6D459 /* PoppinsLatin-Medium.ttf in Resources */,
+				F77153CF26D7C82D00B6D459 /* PoppinsLatin-Bold.ttf in Resources */,
 				F73ECDCE26D6BE9E00FD51CD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,7 +305,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.IRMCI.MyMCI-Entry-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -313,7 +325,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.IRMCI.MyMCI-Entry-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

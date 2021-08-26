@@ -1,30 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="PoppinsLatin-Bold.ttf">
+            <string>PoppinsLatin-Bold</string>
+        </array>
+        <array key="PoppinsLatin-Light.ttf">
+            <string>PoppinsLatin-Light</string>
+        </array>
+        <array key="PoppinsLatin-Medium.ttf">
+            <string>PoppinsLatin-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyMCI_Entry_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MyMCI Entry Project" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXM-Hd-0pM">
+                                <rect key="frame" x="92.666666666666686" y="76" width="205" height="28"/>
+                                <fontDescription key="fontDescription" name="PoppinsLatin-Bold" family="Poppins Latin" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="siJ-6h-QLB" userLabel="Inner View">
+                                <rect key="frame" x="16" y="136" width="358" height="177"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter username" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msf-rN-w5q">
+                                        <rect key="frame" x="16.000000000000007" y="16" width="111.66666666666669" height="19.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="PoppinsLatin-Medium" family="Poppins Latin" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. &quot;twostraws&quot;, &quot;Ali&quot;" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y7V-CL-ywf">
+                                        <rect key="frame" x="12" y="47.666666666666657" width="334" height="50"/>
+                                        <color key="backgroundColor" red="0.90945774319999995" green="0.91751533750000003" blue="0.92987120150000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="AuV-X3-XvF"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="gIM-ep-Biz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PoppinsLatin-Medium" family="Poppins Latin" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qiY-aw-AOL">
+                                        <rect key="frame" x="12" y="109.66666666666664" width="334" height="51.333333333333329"/>
+                                        <color key="backgroundColor" red="0.90945774319999995" green="0.91751533750000003" blue="0.92987120150000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="PoppinsLatin-Bold" family="Poppins Latin" pointSize="16"/>
+                                        <state key="normal" title="Search">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="msf-rN-w5q" firstAttribute="top" secondItem="siJ-6h-QLB" secondAttribute="top" constant="16" id="1jb-rt-no6"/>
+                                    <constraint firstItem="qiY-aw-AOL" firstAttribute="top" secondItem="y7V-CL-ywf" secondAttribute="bottom" constant="12" id="J0i-dM-mfP"/>
+                                    <constraint firstItem="qiY-aw-AOL" firstAttribute="top" secondItem="y7V-CL-ywf" secondAttribute="bottom" constant="12" id="LVi-Dx-1Kw"/>
+                                    <constraint firstAttribute="bottom" secondItem="qiY-aw-AOL" secondAttribute="bottom" constant="16" id="Rd5-vl-Ic6"/>
+                                    <constraint firstItem="qiY-aw-AOL" firstAttribute="leading" secondItem="siJ-6h-QLB" secondAttribute="leading" constant="12" id="T5H-V8-Yjh"/>
+                                    <constraint firstItem="msf-rN-w5q" firstAttribute="leading" secondItem="siJ-6h-QLB" secondAttribute="leading" constant="16" id="UmK-3X-hNF"/>
+                                    <constraint firstItem="y7V-CL-ywf" firstAttribute="top" secondItem="msf-rN-w5q" secondAttribute="bottom" constant="12" id="cVO-5T-i7G"/>
+                                    <constraint firstItem="y7V-CL-ywf" firstAttribute="leading" secondItem="siJ-6h-QLB" secondAttribute="leading" constant="12" id="g1u-gy-3MO"/>
+                                    <constraint firstAttribute="trailing" secondItem="qiY-aw-AOL" secondAttribute="trailing" constant="12" id="iJJ-c0-7Pg"/>
+                                    <constraint firstAttribute="trailing" secondItem="y7V-CL-ywf" secondAttribute="trailing" constant="12" id="xcD-GE-VQ0"/>
+                                    <constraint firstItem="y7V-CL-ywf" firstAttribute="top" secondItem="msf-rN-w5q" secondAttribute="bottom" constant="12" id="zc7-sN-lU5"/>
+                                    <constraint firstItem="qiY-aw-AOL" firstAttribute="height" secondItem="y7V-CL-ywf" secondAttribute="height" multiplier="1.02941" id="zgx-A1-Bd3"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="file-search" translatesAutoresizingMaskIntoConstraints="NO" id="6dU-lv-8xh">
+                                <rect key="frame" x="75" y="449" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fill the text box to find something" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2m-JT-ECF">
+                                <rect key="frame" x="101" y="594" width="195" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PoppinsLatin-Light" family="Poppins Latin" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.90945774319999995" green="0.91751533750000003" blue="0.92987120150000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="siJ-6h-QLB" firstAttribute="top" secondItem="qXM-Hd-0pM" secondAttribute="bottom" constant="32" id="6A2-j8-OQ0"/>
+                            <constraint firstItem="qXM-Hd-0pM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="FpO-b7-z4a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="siJ-6h-QLB" secondAttribute="trailing" constant="16" id="Kgc-yM-fPy"/>
+                            <constraint firstItem="siJ-6h-QLB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WrZ-33-NuC"/>
+                            <constraint firstItem="qXM-Hd-0pM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ZV8-Bj-sop"/>
+                            <constraint firstItem="siJ-6h-QLB" firstAttribute="top" secondItem="qXM-Hd-0pM" secondAttribute="bottom" constant="32" id="rfZ-Jp-9KN"/>
+                            <constraint firstItem="siJ-6h-QLB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="tow-39-Hg1"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="79"/>
+            <point key="canvasLocation" x="18.46153846153846" y="78.199052132701425"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5HP-nV-1qj">
+            <objects>
+                <viewController id="BmJ-r1-lrl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JJM-LX-aja">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="dwI-xk-tUn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tgs-lA-LCw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828" y="78"/>
         </scene>
     </scenes>
     <resources>
+        <image name="file-search" width="212" height="256"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
