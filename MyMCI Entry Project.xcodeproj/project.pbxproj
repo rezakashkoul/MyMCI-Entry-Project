@@ -8,19 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		F73ECDC726D6BE9E00FD51CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73ECDC626D6BE9E00FD51CD /* AppDelegate.swift */; };
-		F73ECDCB26D6BE9E00FD51CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73ECDCA26D6BE9E00FD51CD /* ViewController.swift */; };
+		F73ECDCB26D6BE9E00FD51CD /* FirstController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73ECDCA26D6BE9E00FD51CD /* FirstController.swift */; };
 		F73ECDCE26D6BE9E00FD51CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F73ECDCC26D6BE9E00FD51CD /* Main.storyboard */; };
 		F73ECDD026D6BE9F00FD51CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F73ECDCF26D6BE9F00FD51CD /* Assets.xcassets */; };
 		F73ECDD326D6BE9F00FD51CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F73ECDD126D6BE9F00FD51CD /* LaunchScreen.storyboard */; };
 		F77153CE26D7C82D00B6D459 /* PoppinsLatin-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F77153CB26D7C82C00B6D459 /* PoppinsLatin-Medium.ttf */; };
 		F77153CF26D7C82D00B6D459 /* PoppinsLatin-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F77153CC26D7C82D00B6D459 /* PoppinsLatin-Bold.ttf */; };
 		F77153D026D7C82D00B6D459 /* PoppinsLatin-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F77153CD26D7C82D00B6D459 /* PoppinsLatin-Light.ttf */; };
+		F77153D426D8280200B6D459 /* GitFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77153D326D8280200B6D459 /* GitFeed.swift */; };
+		F77153D626D836E100B6D459 /* ResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77153D526D836E100B6D459 /* ResultController.swift */; };
+		F77153D826D838B000B6D459 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77153D726D838B000B6D459 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F73ECDC326D6BE9E00FD51CD /* MyMCI Entry Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyMCI Entry Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F73ECDC626D6BE9E00FD51CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F73ECDCA26D6BE9E00FD51CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F73ECDCA26D6BE9E00FD51CD /* FirstController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstController.swift; sourceTree = "<group>"; };
 		F73ECDCD26D6BE9E00FD51CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F73ECDCF26D6BE9F00FD51CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F73ECDD226D6BE9F00FD51CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -28,6 +31,9 @@
 		F77153CB26D7C82C00B6D459 /* PoppinsLatin-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoppinsLatin-Medium.ttf"; sourceTree = "<group>"; };
 		F77153CC26D7C82D00B6D459 /* PoppinsLatin-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoppinsLatin-Bold.ttf"; sourceTree = "<group>"; };
 		F77153CD26D7C82D00B6D459 /* PoppinsLatin-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoppinsLatin-Light.ttf"; sourceTree = "<group>"; };
+		F77153D326D8280200B6D459 /* GitFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitFeed.swift; sourceTree = "<group>"; };
+		F77153D526D836E100B6D459 /* ResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultController.swift; sourceTree = "<group>"; };
+		F77153D726D838B000B6D459 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +67,10 @@
 			isa = PBXGroup;
 			children = (
 				F73ECDC626D6BE9E00FD51CD /* AppDelegate.swift */,
-				F73ECDCA26D6BE9E00FD51CD /* ViewController.swift */,
+				F73ECDCA26D6BE9E00FD51CD /* FirstController.swift */,
+				F77153D526D836E100B6D459 /* ResultController.swift */,
+				F77153D726D838B000B6D459 /* TableViewCell.swift */,
+				F77153D326D8280200B6D459 /* GitFeed.swift */,
 				F73ECDCC26D6BE9E00FD51CD /* Main.storyboard */,
 				F73ECDCF26D6BE9F00FD51CD /* Assets.xcassets */,
 				F73ECDD126D6BE9F00FD51CD /* LaunchScreen.storyboard */,
@@ -146,7 +155,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F73ECDCB26D6BE9E00FD51CD /* ViewController.swift in Sources */,
+				F77153D826D838B000B6D459 /* TableViewCell.swift in Sources */,
+				F77153D626D836E100B6D459 /* ResultController.swift in Sources */,
+				F77153D426D8280200B6D459 /* GitFeed.swift in Sources */,
+				F73ECDCB26D6BE9E00FD51CD /* FirstController.swift in Sources */,
 				F73ECDC726D6BE9E00FD51CD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
