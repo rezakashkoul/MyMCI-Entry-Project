@@ -21,10 +21,26 @@ class FirstController: UIViewController {
     }
 
     @IBAction func searchButton(_ sender: UIButton) {
+        usernameTextField.resignFirstResponder()
+        let alert = UIAlertController(title: "Empty Field!", message: "Please type a GitHub username", preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "Okay!", style: .cancel, handler: nil))
+        present(alert,  animated: true)
+
         
-    }
+        guard let vc = storyboard?.instantiateViewController(identifier: "resultPage") as? ResultController else { return }
+        navigationController?.pushViewController(vc, animated: true)
+        
+        }
+        
     
-//    let url = "https://api.github.com/users/defunkt"
     
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "showResult" {
+//            let controller = segue.destination as! ResultController
+//            present(controller, animated: true)
+//        }
+//    }
 }
 

@@ -38,8 +38,28 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
     }
     
     @IBAction func backPageButton(_ sender: UIButton) {
+//
+        
+        
     }
+
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "goHome" {
+//            let controller = segue.destination as! FirstController
+//            present(controller, animated: true)
+//
+//        }
+//    }
     
+
+    
+    
+    
+        
+
+        
+        
+        
 //    @IBAction func starFilterButton(_ sender: Any) {
 //    }
 //

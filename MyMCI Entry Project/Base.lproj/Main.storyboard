@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BmJ-r1-lrl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -23,9 +23,9 @@
         <!--First Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="FirstController" customModule="MyMCI_Entry_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="firstPage" id="BYZ-38-t0r" customClass="FirstController" customModule="MyMCI_Entry_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MyMCI Entry Project" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXM-Hd-0pM">
@@ -51,9 +51,9 @@
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="gIM-ep-Biz"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="PoppinsLatin-Medium" family="Poppins Latin" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="go"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qiY-aw-AOL">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qiY-aw-AOL" userLabel="searchButton">
                                         <rect key="frame" x="12" y="110" width="319" height="51.5"/>
                                         <color key="backgroundColor" red="1" green="0.53465056420000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="PoppinsLatin-Bold" family="Poppins Latin" pointSize="16"/>
@@ -62,6 +62,7 @@
                                         </state>
                                         <connections>
                                             <action selector="searchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DMQ-Pp-PlD"/>
+                                            <segue destination="BmJ-r1-lrl" kind="show" identifier="showResult" id="0Q0-TH-Okr"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -83,13 +84,13 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="file-search" translatesAutoresizingMaskIntoConstraints="NO" id="6dU-lv-8xh">
-                                <rect key="frame" x="75" y="306" width="225" height="128"/>
+                                <rect key="frame" x="75" y="286" width="225" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="0LR-Mq-WfT"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fill the text box to find something" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2m-JT-ECF">
-                                <rect key="frame" x="101" y="451" width="195" height="17"/>
+                                <rect key="frame" x="101" y="431" width="195" height="17"/>
                                 <fontDescription key="fontDescription" name="PoppinsLatin-Light" family="Poppins Latin" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -112,6 +113,7 @@
                             <constraint firstItem="siJ-6h-QLB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="tow-39-Hg1"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="N1q-Ol-TKx"/>
                     <connections>
                         <outlet property="searchImageLogo" destination="6dU-lv-8xh" id="tcH-qC-shd"/>
                         <outlet property="usernameTextField" destination="y7V-CL-ywf" id="Apd-S7-Xwy"/>
@@ -121,16 +123,16 @@
             </objects>
             <point key="canvasLocation" x="-82" y="77"/>
         </scene>
-        <!--Result Controller-->
+        <!--resultPage-->
         <scene sceneID="5HP-nV-1qj">
             <objects>
-                <viewController id="BmJ-r1-lrl" customClass="ResultController" customModule="MyMCI_Entry_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="resultPage" title="resultPage" id="BmJ-r1-lrl" customClass="ResultController" customModule="MyMCI_Entry_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JJM-LX-aja">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fpr-QC-6D3">
-                                <rect key="frame" x="16" y="193" width="343" height="452"/>
+                                <rect key="frame" x="16" y="195" width="343" height="452"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="193" id="XlJ-Lb-gj4" customClass="TableViewCell" customModule="MyMCI_Entry_Project" customModuleProvider="target">
@@ -238,7 +240,7 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xqi-NW-rtY" userLabel="Inner View">
-                                <rect key="frame" x="16" y="32" width="343" height="127"/>
+                                <rect key="frame" x="16" y="32" width="343" height="129"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZbU-UV-sWS">
                                         <rect key="frame" x="43" y="16" width="257" height="34"/>
@@ -259,7 +261,7 @@
                                         </connections>
                                     </button>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zSh-rM-tRd">
-                                        <rect key="frame" x="58" y="64" width="259" height="32"/>
+                                        <rect key="frame" x="58" y="64" width="259" height="34"/>
                                         <segments>
                                             <segment title="Stars"/>
                                             <segment title="forks"/>
@@ -281,6 +283,7 @@
                                         <state key="normal" title="Back" image="arrow-left"/>
                                         <connections>
                                             <action selector="backPageButton:" destination="BmJ-r1-lrl" eventType="touchUpInside" id="w0R-SI-zJ7"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="UqT-2Q-W3a"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XG2-HG-m68">
@@ -327,6 +330,7 @@
                             <constraint firstItem="Fpr-QC-6D3" firstAttribute="top" secondItem="Xqi-NW-rtY" secondAttribute="bottom" constant="34" id="vxc-zA-AhM"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="jDg-Vj-cWa"/>
                     <connections>
                         <outlet property="resultTableView" destination="Fpr-QC-6D3" id="4hz-7b-eSy"/>
                         <outlet property="searchField" destination="ZbU-UV-sWS" id="oCE-N5-tmS"/>
