@@ -1,0 +1,6 @@
+framework module Pods_MyMCI_Entry_Project {
+  umbrella header "Pods-MyMCI Entry Project-umbrella.h"
+
+  export *
+  module * { export * }
+}

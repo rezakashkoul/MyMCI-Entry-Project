@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD6116B4CCD0C547FCCD0065 /* Pods_MyMCI_Entry_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C9F1A4A4B5FDBB1110B6FA /* Pods_MyMCI_Entry_Project.framework */; };
 		F73ECDC726D6BE9E00FD51CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73ECDC626D6BE9E00FD51CD /* AppDelegate.swift */; };
 		F73ECDCB26D6BE9E00FD51CD /* FirstController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73ECDCA26D6BE9E00FD51CD /* FirstController.swift */; };
 		F73ECDCE26D6BE9E00FD51CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F73ECDCC26D6BE9E00FD51CD /* Main.storyboard */; };
@@ -21,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D30BC2D382B74C0580AB0DB /* Pods-MyMCI Entry Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMCI Entry Project.release.xcconfig"; path = "Target Support Files/Pods-MyMCI Entry Project/Pods-MyMCI Entry Project.release.xcconfig"; sourceTree = "<group>"; };
+		37C9F1A4A4B5FDBB1110B6FA /* Pods_MyMCI_Entry_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMCI_Entry_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74D26462F44A6B47AA91AA9F /* Pods-MyMCI Entry Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMCI Entry Project.debug.xcconfig"; path = "Target Support Files/Pods-MyMCI Entry Project/Pods-MyMCI Entry Project.debug.xcconfig"; sourceTree = "<group>"; };
 		F73ECDC326D6BE9E00FD51CD /* MyMCI Entry Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyMCI Entry Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F73ECDC626D6BE9E00FD51CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F73ECDCA26D6BE9E00FD51CD /* FirstController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstController.swift; sourceTree = "<group>"; };
@@ -41,17 +45,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD6116B4CCD0C547FCCD0065 /* Pods_MyMCI_Entry_Project.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06CE66CFF41C66BC918773B7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				74D26462F44A6B47AA91AA9F /* Pods-MyMCI Entry Project.debug.xcconfig */,
+				2D30BC2D382B74C0580AB0DB /* Pods-MyMCI Entry Project.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		92955BBA8C2393F6B76D6458 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37C9F1A4A4B5FDBB1110B6FA /* Pods_MyMCI_Entry_Project.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F73ECDBA26D6BE9E00FD51CD = {
 			isa = PBXGroup;
 			children = (
 				F73ECDC526D6BE9E00FD51CD /* MyMCI Entry Project */,
 				F73ECDC426D6BE9E00FD51CD /* Products */,
+				06CE66CFF41C66BC918773B7 /* Pods */,
+				92955BBA8C2393F6B76D6458 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,9 +114,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F73ECDD726D6BE9F00FD51CD /* Build configuration list for PBXNativeTarget "MyMCI Entry Project" */;
 			buildPhases = (
+				D2B7AEA740974594D2FC4A64 /* [CP] Check Pods Manifest.lock */,
 				F73ECDBF26D6BE9E00FD51CD /* Sources */,
 				F73ECDC026D6BE9E00FD51CD /* Frameworks */,
 				F73ECDC126D6BE9E00FD51CD /* Resources */,
+				51D50501A9A2E59B5DEC621B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +176,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		51D50501A9A2E59B5DEC621B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyMCI Entry Project/Pods-MyMCI Entry Project-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyMCI Entry Project/Pods-MyMCI Entry Project-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyMCI Entry Project/Pods-MyMCI Entry Project-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2B7AEA740974594D2FC4A64 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyMCI Entry Project-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F73ECDBF26D6BE9E00FD51CD /* Sources */ = {
@@ -303,6 +372,7 @@
 		};
 		F73ECDD826D6BE9F00FD51CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74D26462F44A6B47AA91AA9F /* Pods-MyMCI Entry Project.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -323,6 +393,7 @@
 		};
 		F73ECDD926D6BE9F00FD51CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D30BC2D382B74C0580AB0DB /* Pods-MyMCI Entry Project.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

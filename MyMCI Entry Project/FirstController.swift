@@ -25,11 +25,21 @@ class FirstController: UIViewController {
         let alert = UIAlertController(title: "Empty Field!", message: "Please type a GitHub username", preferredStyle: .alert)
 
         alert.addAction(UIAlertAction(title: "Okay!", style: .cancel, handler: nil))
-        present(alert,  animated: true)
+        if usernameTextField.text == "" {
+            present(alert,  animated: true)
+            
+        } else {
+            
+            guard let vc = storyboard?.instantiateViewController(identifier: "resultPage") as? ResultController else { return }
+            navigationController?.pushViewController(vc, animated: true)
+            
+            
+        }
+        
+        
 
         
-        guard let vc = storyboard?.instantiateViewController(identifier: "resultPage") as? ResultController else { return }
-        navigationController?.pushViewController(vc, animated: true)
+        
         
         }
         
