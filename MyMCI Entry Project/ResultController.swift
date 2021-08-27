@@ -40,14 +40,21 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
     @IBAction func backPageButton(_ sender: UIButton) {
     }
     
-    @IBAction func starFilterButton(_ sender: Any) {
+//    @IBAction func starFilterButton(_ sender: Any) {
+//    }
+//
+//    @IBAction func forkFilterButton(_ sender: UIButton) {
+//    }
+//
+//    @IBAction func watchFilterButton(_ sender: UIButton) {
+//    }
+    
+    
+    
+    @IBAction func FilterSegment(_ sender: UISegmentedControl) {
     }
     
-    @IBAction func forkFilterButton(_ sender: UIButton) {
-    }
     
-    @IBAction func watchFilterButton(_ sender: UIButton) {
-    }
     
     
     @IBAction func sortDescendingButton(_ sender: UIButton) {
