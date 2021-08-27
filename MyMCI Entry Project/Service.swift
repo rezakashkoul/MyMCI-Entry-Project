@@ -6,14 +6,19 @@
 //
 
 import Foundation
-struct Service : Codable {
+import Alamofire
+
+struct Service : Decodable {
     //var username : String = ""
-    var full_name : String = ""
+    var full_name : String?
    // var star : Int = 0
-    var forks_count : Int = 0
-    var watchers_count : Int = 0
-    var comments_url : String = ""
+    var forks_count : Int?
+    var watchers_count : Int?
+    var comments_url : String?
     
     
     
 }
+
+
+

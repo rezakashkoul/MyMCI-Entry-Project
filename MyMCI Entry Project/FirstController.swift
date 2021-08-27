@@ -25,13 +25,12 @@ class FirstController: UIViewController {
 
         AF.request("https://api.github.com/users/\(usernameTextField.text ?? "alireza12t")/repos").response {
             response in debugPrint(response)
-//            let request = AF.request("https://api.github.com/users/alireza12t/repos")
-//                // 2
-//                request.responseJSON { (data) in
-//                  print(data)
-//                }
+
+            
         }
         
+        
+
         
         
     }
@@ -52,6 +51,12 @@ class FirstController: UIViewController {
             
             guard let vc = storyboard?.instantiateViewController(identifier: "resultPage") as? ResultController else { return }
             navigationController?.pushViewController(vc, animated: true)
+            
+            struct HTTPBinResponse: Decodable { let url: String }
+
+            AF.request("https://api.github.com/users/\(usernameTextField.text ?? "reza-kashkoul")/repos").responseDecodable(of: HTTPBinResponse.self) { response in
+                debugPrint("Response: \(response)")
+            }
             
         
             }
