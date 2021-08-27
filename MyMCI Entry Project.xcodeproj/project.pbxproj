@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,7 +16,7 @@
 		F77153CE26D7C82D00B6D459 /* PoppinsLatin-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F77153CB26D7C82C00B6D459 /* PoppinsLatin-Medium.ttf */; };
 		F77153CF26D7C82D00B6D459 /* PoppinsLatin-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F77153CC26D7C82D00B6D459 /* PoppinsLatin-Bold.ttf */; };
 		F77153D026D7C82D00B6D459 /* PoppinsLatin-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F77153CD26D7C82D00B6D459 /* PoppinsLatin-Light.ttf */; };
-		F77153D426D8280200B6D459 /* GitFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77153D326D8280200B6D459 /* GitFeed.swift */; };
+		F77153D426D8280200B6D459 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77153D326D8280200B6D459 /* Service.swift */; };
 		F77153D626D836E100B6D459 /* ResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77153D526D836E100B6D459 /* ResultController.swift */; };
 		F77153D826D838B000B6D459 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77153D726D838B000B6D459 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -35,7 +35,7 @@
 		F77153CB26D7C82C00B6D459 /* PoppinsLatin-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoppinsLatin-Medium.ttf"; sourceTree = "<group>"; };
 		F77153CC26D7C82D00B6D459 /* PoppinsLatin-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoppinsLatin-Bold.ttf"; sourceTree = "<group>"; };
 		F77153CD26D7C82D00B6D459 /* PoppinsLatin-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoppinsLatin-Light.ttf"; sourceTree = "<group>"; };
-		F77153D326D8280200B6D459 /* GitFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitFeed.swift; sourceTree = "<group>"; };
+		F77153D326D8280200B6D459 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		F77153D526D836E100B6D459 /* ResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultController.swift; sourceTree = "<group>"; };
 		F77153D726D838B000B6D459 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,7 +58,6 @@
 				74D26462F44A6B47AA91AA9F /* Pods-MyMCI Entry Project.debug.xcconfig */,
 				2D30BC2D382B74C0580AB0DB /* Pods-MyMCI Entry Project.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -95,7 +94,7 @@
 				F73ECDCA26D6BE9E00FD51CD /* FirstController.swift */,
 				F77153D526D836E100B6D459 /* ResultController.swift */,
 				F77153D726D838B000B6D459 /* TableViewCell.swift */,
-				F77153D326D8280200B6D459 /* GitFeed.swift */,
+				F77153D326D8280200B6D459 /* Service.swift */,
 				F73ECDCC26D6BE9E00FD51CD /* Main.storyboard */,
 				F73ECDCF26D6BE9F00FD51CD /* Assets.xcassets */,
 				F73ECDD126D6BE9F00FD51CD /* LaunchScreen.storyboard */,
@@ -226,7 +225,7 @@
 			files = (
 				F77153D826D838B000B6D459 /* TableViewCell.swift in Sources */,
 				F77153D626D836E100B6D459 /* ResultController.swift in Sources */,
-				F77153D426D8280200B6D459 /* GitFeed.swift in Sources */,
+				F77153D426D8280200B6D459 /* Service.swift in Sources */,
 				F73ECDCB26D6BE9E00FD51CD /* FirstController.swift in Sources */,
 				F73ECDC726D6BE9E00FD51CD /* AppDelegate.swift in Sources */,
 			);

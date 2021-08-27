@@ -11,20 +11,25 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
 
     @IBOutlet weak var searchField: UITextField!
     
+    var searchIndexedArray = [String]()
     
     
     
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell : TableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
+        
+// setting the data got from json here...
+        
+        cell.usernameLabel.text = searchIndexedArray[indexPath.row]
         
         return cell
         
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return searchIndexedArray.count
     }
     
     @IBOutlet weak var resultTableView: UITableView!
@@ -34,6 +39,7 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
         super.viewDidLoad()
         resultTableView.dataSource = self
         resultTableView.delegate = self
+        
         
     }
     
