@@ -6,12 +6,28 @@
 //
 
 import UIKit
+import Alamofire
+
+
+struct GitHubData : Codable {
+    var name : String?
+    var full_name : String?
+
+    //    let forks_count : Int
+//    let watchers_count : Int
+//    let stargazers_count : Int
+
+}
+
+
+
+
 
 class ResultController: UIViewController , UITableViewDelegate , UITableViewDataSource {
 
     @IBOutlet weak var searchField: UITextField!
     
-    var searchIndexedArray = [String]()
+    var searchIndexedArray = [GitHubData]()
     
     
     
@@ -22,7 +38,8 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
         
 // setting the data got from json here...
         
-        cell.usernameLabel.text = searchIndexedArray[indexPath.row]
+        
+//        cell.usernameLabel.text = searchIndexedArray[indexPath.row]
         
         return cell
         
@@ -39,6 +56,41 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
         super.viewDidLoad()
         resultTableView.dataSource = self
         resultTableView.delegate = self
+        
+        let url = URL(string: "https://api.github.com/users/reza-kashkoul/repos")
+        AF.request(url!).response { response in
+            let result = response.data
+            do {
+                self.searchIndexedArray = try JSONDecoder().decode([GitHubData].self, from: result!)
+                
+                for gitData in self.searchIndexedArray {
+                    print(gitData.name!, ":", gitData.full_name!)
+                }
+            } catch  {
+                print("***Error***")
+            }
+            
+            
+            
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+//        struct HTTPBinResponse: Decodable { let url: String }
+//
+//        AF.request("https://api.github.com/users/reza-kashkoul/repos").responseDecodable(of: HTTPBinResponse.self) { response in
+//            debugPrint("Response: \(response)")
+//        }
+        
         
         
     }

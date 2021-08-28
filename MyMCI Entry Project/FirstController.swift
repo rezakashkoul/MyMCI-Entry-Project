@@ -23,11 +23,11 @@ class FirstController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        AF.request("https://api.github.com/users/\(usernameTextField.text ?? "alireza12t")/repos").response {
-            response in debugPrint(response)
-
-            
-        }
+//        AF.request("https://api.github.com/users/\(usernameTextField.text ?? "alireza12t")/repos").response {
+//            response in debugPrint(response)
+//
+//            
+//        }
         
         
 
