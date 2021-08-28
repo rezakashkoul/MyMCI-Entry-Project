@@ -11,6 +11,7 @@ import Alamofire
 class FirstController: UIViewController {
 
     
+    
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var searchImageLogo: UIImageView!
     
@@ -22,13 +23,6 @@ class FirstController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        AF.request("https://api.github.com/users/\(usernameTextField.text ?? "alireza12t")/repos").response {
-//            response in debugPrint(response)
-//
-//            
-//        }
-        
         
 
         
@@ -36,7 +30,7 @@ class FirstController: UIViewController {
     }
 
     
-
+    
     
     @IBAction func searchButton(_ sender: UIButton) {
         usernameTextField.resignFirstResponder()
@@ -46,17 +40,12 @@ class FirstController: UIViewController {
         let userEnteredText = usernameTextField.text
         if userEnteredText == "" {
             present(alert,  animated: true)
-            
+
         } else {
             
             guard let vc = storyboard?.instantiateViewController(identifier: "resultPage") as? ResultController else { return }
             navigationController?.pushViewController(vc, animated: true)
-            
-            struct HTTPBinResponse: Decodable { let url: String }
-
-            AF.request("https://api.github.com/users/\(usernameTextField.text ?? "reza-kashkoul")/repos").responseDecodable(of: HTTPBinResponse.self) { response in
-                debugPrint("Response: \(response)")
-            }
+           
             
         
             }

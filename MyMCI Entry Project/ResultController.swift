@@ -34,8 +34,7 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
         let cell : TableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
         
 // setting the data got from json here...
-        
-        
+                
 //        cell.usernameLabel.text = resultArray[indexPath.row]
         
         return cell
@@ -43,7 +42,8 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return resultArray.count
+        return 3
+        //return resultArray.count
     }
     
     @IBOutlet weak var resultTableView: UITableView!
@@ -82,23 +82,7 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
             
         }
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
-//        struct HTTPBinResponse: Decodable { let url: String }
-//
-//        AF.request("https://api.github.com/users/reza-kashkoul/repos").responseDecodable(of: HTTPBinResponse.self) { response in
-//            debugPrint("Response: \(response)")
-//        }
-        
+    
         
         
     }
@@ -109,16 +93,7 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
         
     }
 
-    
-    
 
-    
-    
-    
-        
-
-        
-        
         
 //    @IBAction func starFilterButton(_ sender: Any) {
 //    }
