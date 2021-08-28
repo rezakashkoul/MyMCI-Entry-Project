@@ -54,7 +54,7 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
         resultTableView.dataSource = self
         resultTableView.delegate = self
         
-        let url = URL(string: "https://api.github.com/users/alireza12t/repos")
+        let url = URL(string: "https://api.github.com/users/reza-kashkoul/repos")
         AF.request(url!).response { response in
             let result = response.data
             do {

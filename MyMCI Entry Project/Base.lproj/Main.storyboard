@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BmJ-r1-lrl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -62,7 +62,6 @@
                                         </state>
                                         <connections>
                                             <action selector="searchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DMQ-Pp-PlD"/>
-                                            <segue destination="BmJ-r1-lrl" kind="show" identifier="showResult" id="fWZ-gj-bla"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -133,6 +132,7 @@
                     <connections>
                         <outlet property="searchImageLogo" destination="6dU-lv-8xh" id="tcH-qC-shd"/>
                         <outlet property="usernameTextField" destination="y7V-CL-ywf" id="Apd-S7-Xwy"/>
+                        <segue destination="BmJ-r1-lrl" kind="show" identifier="showResult" id="LqP-7T-EmU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

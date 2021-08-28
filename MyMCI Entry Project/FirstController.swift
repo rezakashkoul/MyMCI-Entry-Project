@@ -8,7 +8,7 @@
 import UIKit
 import Alamofire
 
-class FirstController: UIViewController {
+class FirstController: UIViewController ,UITextFieldDelegate {
 
     
     
@@ -17,15 +17,14 @@ class FirstController: UIViewController {
     
     
     
-    
-    
+        
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       // self.usernameTextField.delegate = self
 
-        
         
     }
 
@@ -33,35 +32,40 @@ class FirstController: UIViewController {
     
     
     @IBAction func searchButton(_ sender: UIButton) {
-        usernameTextField.resignFirstResponder()
+      //  usernameTextField.resignFirstResponder()
         let alert = UIAlertController(title: "Empty Field!", message: "Please type a GitHub username", preferredStyle: .alert)
 
         alert.addAction(UIAlertAction(title: "Okay!", style: .cancel, handler: nil))
         let userEnteredText = usernameTextField.text
         if userEnteredText == "" {
             present(alert,  animated: true)
+            
 
         } else {
             
-            guard let vc = storyboard?.instantiateViewController(identifier: "resultPage") as? ResultController else { return }
-            navigationController?.pushViewController(vc, animated: true)
-           
-            
+//            guard let vc = storyboard?.instantiateViewController(identifier: "resultPage") as? ResultController else { return }
+//            navigationController?.pushViewController(vc, animated: true)
+//
+            performSegue(withIdentifier: "showResult", sender: nil)
+            let enteredUsername : String = usernameTextField.text!
+            print("THIS The USERNAME YOU SEARCHED FOR  \(enteredUsername) ")
         
             }
         }
         
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    func textFieldShouldReturn(userText: UITextField!) -> Bool {
+        usernameTextField.resignFirstResponder()
+        return true
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
-    
-    
-    
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "showResult" {
-//            let controller = segue.destination as! ResultController
-//            present(controller, animated: true)
-//        }
-//    }
+
 }
 
