@@ -32,8 +32,6 @@ class TableViewCell: UITableViewCell {
     }
     
     
-    
-    
     @IBAction func sendCommentButton(_ sender: UIButton) {
         sender.resignFirstResponder()
         

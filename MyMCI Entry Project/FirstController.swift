@@ -18,6 +18,8 @@ class FirstController: UIViewController ,UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //for locking app appearance to the light mode
+        overrideUserInterfaceStyle = .light
         self.usernameTextField.delegate = self
         //show clear button while you write something
         usernameTextField.clearButtonMode = .whileEditing
@@ -46,7 +48,7 @@ class FirstController: UIViewController ,UITextFieldDelegate {
         
     }
     
-            //Transfaring Data from the search field to the other page in order to getting it's data from API.
+    //Transfaring Data from the search field to the other page in order to getting it's data from API.
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showResult" {
@@ -56,7 +58,7 @@ class FirstController: UIViewController ,UITextFieldDelegate {
         }
     }
     
-            //Keyboard needed configurations!
+    //Keyboard needed configurations!
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)

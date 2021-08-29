@@ -11,7 +11,7 @@ import Alamofire
 
 class ResultController: UIViewController , UITableViewDelegate , UITableViewDataSource {
     
-//    var userDetail : [(ownerImage: UIImage , ownerName: String , name: String , stars : Int , forks : Int , watchers : Int , comment : String )] = []
+    //    var userDetail : [(ownerImage: UIImage , ownerName: String , name: String , stars : Int , forks : Int , watchers : Int , comment : String )] = []
     
     
     
@@ -68,7 +68,7 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
     var numberOfWwatchers = Int()
     var numberOfStargazers = Int()
     //*****************************
-
+    
     
     
     
@@ -78,6 +78,9 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //for locking app appearance to the light mode
+        overrideUserInterfaceStyle = .light
+
         print("The chosen user name is \(searchedUsername)")
         
         
@@ -95,8 +98,8 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
                 self.resultArray = try JSONDecoder().decode([GitHubData].self, from: result!)
                 
                 for gitData in self.resultArray {
-                                
-                                        print("""
+                    
+                    print("""
                     
                     The name is \(gitData.name!) ,
                     The full name is \(gitData.full_name!) ,
@@ -133,7 +136,7 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
         
         //show clear button while you write something
         searchField.clearButtonMode = .whileEditing
-
+        
     }
     // Because of UI Designed intentions, I used a custom button to do "back" function
     @IBAction func backPageButton(_ sender: UIButton) {
