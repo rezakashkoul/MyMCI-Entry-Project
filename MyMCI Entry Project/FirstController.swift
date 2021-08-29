@@ -9,58 +9,44 @@ import UIKit
 import Alamofire
 
 class FirstController: UIViewController ,UITextFieldDelegate {
-
     
     
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var searchImageLogo: UIImageView!
     
     
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       self.usernameTextField.delegate = self
-
+        self.usernameTextField.delegate = self
         
     }
-
     
     
     
     @IBAction func searchButton(_ sender: UIButton) {
-
         
-        
+        //show the alert message!
         let alert = UIAlertController(title: "Empty Field!", message: "Please type a GitHub username", preferredStyle: .alert)
-
+        
         alert.addAction(UIAlertAction(title: "Okay!", style: .cancel, handler: nil))
         
         if usernameTextField.text == "" {
-            present(alert,  animated: true)
+            present(alert, animated: true)
             
-
         } else {
             
-//            guard let vc = storyboard?.instantiateViewController(identifier: "resultPage") as? ResultController else { return }
-//            navigationController?.pushViewController(vc, animated: true)
-//
-            
-            
-            
-            
+            //show the next page!
             performSegue(withIdentifier: "showResult", sender: nil)
             let _ : String = usernameTextField.text!
-           // print("THIS The USERNAME YOU SEARCHED FOR  \(enteredUsername) ")
+            // print("THIS The USERNAME YOU SEARCHED FOR  \(enteredUsername) ")
             
-            
-            }
-        
         }
         
+    }
+    
+            //Transfaring Data from the search field to the other page in order to getting it's data from API.
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showResult" {
             let destinationController = segue.destination as! ResultController
@@ -69,26 +55,26 @@ class FirstController: UIViewController ,UITextFieldDelegate {
         }
     }
     
+            //Keyboard needed configurations!
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
     
     
-    
-    
     func textFieldShouldReturn(userText: UITextField!) -> Bool {
         usernameTextField.resignFirstResponder()
-
+        
         return true
     }
-
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
     
-
+    
 }
 
 

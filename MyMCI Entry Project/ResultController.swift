@@ -9,33 +9,27 @@ import UIKit
 import Alamofire
 
 
-
-//struct GitHubData : Codable {
-//    var name : String?
-//    var full_name : String?
-//    var forks_count : Int
-//    var watchers_count : Int
-//    let stargazers_count : Int
-//
-//}
-
-
 class ResultController: UIViewController , UITableViewDelegate , UITableViewDataSource {
-
-    @IBOutlet weak var searchField: UITextField!
     
+    
+    // The variable you searched in the first page
+    var searchedUsername = String()
+    
+    //List of results in the array to store and show
     var resultArray = [GitHubData]()
     
     
     
+    @IBOutlet weak var searchField: UITextField!
+    @IBOutlet weak var resultTableView: UITableView!
     
     
+    //Configuring TableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : TableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
         
-// setting the data got from json here...
-                
-//        cell.usernameLabel.text = resultArray[indexPath.row]
+        // setting the data got from json here...
+        // cell.usernameLabel.text = resultArray[indexPath.row]
         
         return cell
         
@@ -50,10 +44,6 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    @IBOutlet weak var resultTableView: UITableView!
-    
-    var searchedUsername = String()
-    
     
     
     override func viewDidLoad() {
@@ -64,8 +54,8 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
         
         resultTableView.dataSource = self
         resultTableView.delegate = self
-    
         
+        //getting data from GitHub API
         let url = URL(string: "https://api.github.com/users/\(searchedUsername)/repos")
         AF.request(url!).response { response in
             let result = response.data
@@ -73,7 +63,7 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
                 self.resultArray = try JSONDecoder().decode([GitHubData].self, from: result!)
                 
                 for gitData in self.resultArray {
-
+                    
                     print("""
                     The name is \(gitData.name!) ,
                     The full name is \(gitData.full_name!) ,
@@ -82,39 +72,27 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
                     The stargazers count is \(gitData.stargazers_count)
                     """)
                     
-                    
                 }
             } catch  {
                 print("***Error***")
             }
             
-            
         }
         
     }
-    
+    // Because of UI Designed intentions, I used a custom button to do "back" function
     @IBAction func backPageButton(_ sender: UIButton) {
-//
         
         
     }
-
-
-        
-//    @IBAction func starFilterButton(_ sender: Any) {
-//    }
-//
-//    @IBAction func forkFilterButton(_ sender: UIButton) {
-//    }
-//
-//    @IBAction func watchFilterButton(_ sender: UIButton) {
-//    }
     
-    
+    // here is the configuration for filter the results
     
     @IBAction func FilterSegment(_ sender: UISegmentedControl) {
     }
     
+    
+    //another function for sorting results
     
     @IBAction func sortDescendingButton(_ sender: UIButton) {
     }
