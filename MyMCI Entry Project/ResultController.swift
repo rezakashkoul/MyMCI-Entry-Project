@@ -15,10 +15,10 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
     
     
     
-    // The variable you searched in the first page
+        // The variable you searched in the first page
     public var searchedUsername = String()
     
-    //List of results in the array to store and show
+        //List of results in the array to store and show
     var resultArray = [GitHubData]()
     
     
@@ -26,7 +26,7 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
     @IBOutlet weak var resultTableView: UITableView!
     
     
-    //Configuring TableView
+        //Configuring TableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : TableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
         cell.usernameLabel.text = searchedUsername
@@ -38,8 +38,8 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
         //return resultArray.count
+        return resultArray.count
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -68,29 +68,30 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
                 
                 for gitData in self.resultArray {
                     
-                    
-//
+            
                     print("""
+                    
                     The name is \(gitData.name!) ,
                     The full name is \(gitData.full_name!) ,
                     The forks count is \(gitData.forks_count) ,
                     The watchers count is \(gitData.watchers_count) ,
                     The stargazers count is \(gitData.stargazers_count)
+                    
                     """)
                     
-                    let tempArr = self.resultArray
                     
                     
                 }
             } catch  {
                 print("***Error***" )
+                
                 let alert = UIAlertController(title: "Search Field!", message: "Please type a valid username", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Let's Try!", style: .cancel, handler: nil))
                 self.present(alert, animated: true)
                 
             }
             
-        }
+        }.resume()
         
     }
     // Because of UI Designed intentions, I used a custom button to do "back" function
