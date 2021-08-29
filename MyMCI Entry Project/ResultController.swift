@@ -46,13 +46,29 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
         //return resultArray.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     @IBOutlet weak var resultTableView: UITableView!
     
+    var transferdUsername = String()
+    
+    @objc func didGetNotification (_ notification : Notification){
+        let text = notification.object as! String?
+        transferdUsername = text!
+        print("*******\(transferdUsername)******BBB")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         resultTableView.dataSource = self
         resultTableView.delegate = self
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(didGetNotification), name: Notification.Name("text"), object: nil)
+        
+        
+        
         
         let url = URL(string: "https://api.github.com/users/reza-kashkoul/repos")
         AF.request(url!).response { response in

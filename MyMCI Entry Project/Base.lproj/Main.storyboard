@@ -51,7 +51,7 @@
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="gIM-ep-Biz"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="PoppinsLatin-Medium" family="Poppins Latin" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="go"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qiY-aw-AOL" userLabel="searchButton">
                                         <rect key="frame" x="12" y="110" width="264" height="51.5"/>
