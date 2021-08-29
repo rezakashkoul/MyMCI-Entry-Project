@@ -18,6 +18,11 @@ struct GitHubData : Codable {
     let stargazers_count : Int
     //  let avatar_url: UIImage?
     
+    
+    
+    
+    //var userDetail : [(ownerImage: UIImage , ownerName: String , name: String , stars : Int , forks : Int , watchers : Int , comment : String )] = []
+    
 }
 
 

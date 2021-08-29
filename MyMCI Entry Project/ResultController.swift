@@ -11,13 +11,15 @@ import Alamofire
 
 class ResultController: UIViewController , UITableViewDelegate , UITableViewDataSource {
     
+    var userDetail : [(ownerImage: UIImage , ownerName: String , name: String , stars : Int , forks : Int , watchers : Int , comment : String )] = []
+    
+    
     
     // The variable you searched in the first page
-    var searchedUsername = String()
+    public var searchedUsername = String()
     
     //List of results in the array to store and show
     var resultArray = [GitHubData]()
-    
     
     
     @IBOutlet weak var searchField: UITextField!
@@ -27,7 +29,7 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
     //Configuring TableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : TableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
-        
+        cell.usernameLabel.text = searchedUsername
         // setting the data got from json here...
         // cell.usernameLabel.text = resultArray[indexPath.row]
         
@@ -55,6 +57,8 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
         resultTableView.dataSource = self
         resultTableView.delegate = self
         
+        
+        
         //getting data from GitHub API
         let url = URL(string: "https://api.github.com/users/\(searchedUsername)/repos")
         AF.request(url!).response { response in
@@ -64,6 +68,8 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
                 
                 for gitData in self.resultArray {
                     
+                    
+//
                     print("""
                     The name is \(gitData.name!) ,
                     The full name is \(gitData.full_name!) ,
@@ -72,9 +78,16 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
                     The stargazers count is \(gitData.stargazers_count)
                     """)
                     
+                    let tempArr = self.resultArray
+                    
+                    
                 }
             } catch  {
-                print("***Error***")
+                print("***Error***" )
+                let alert = UIAlertController(title: "Search Field!", message: "Please type a valid username", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Let's Try!", style: .cancel, handler: nil))
+                self.present(alert, animated: true)
+                
             }
             
         }

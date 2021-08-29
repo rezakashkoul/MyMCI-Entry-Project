@@ -27,7 +27,7 @@ class TableViewCell: UITableViewCell {
     
     
     @IBOutlet weak var commentTextField: UITextField!
-    
+    let obj = ResultController()
     
     
     override func awakeFromNib() {
