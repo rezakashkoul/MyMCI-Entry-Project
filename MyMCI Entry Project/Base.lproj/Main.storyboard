@@ -173,7 +173,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Send You Comment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mCs-Fu-TfT">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Send Your Comment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mCs-Fu-TfT">
                                                     <rect key="frame" x="28" y="130" width="202" height="40"/>
                                                     <color key="backgroundColor" red="0.90945774319999995" green="0.91751533750000003" blue="0.92987120150000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="PoppinsLatin-Medium" family="Poppins Latin" pointSize="0.0"/>
@@ -259,7 +259,7 @@
                                 <rect key="frame" x="16" y="32" width="288" height="93"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. &quot;twostraws&quot;, &quot;Ali&quot;" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZbU-UV-sWS">
-                                        <rect key="frame" x="45" y="14" width="196" height="34"/>
+                                        <rect key="frame" x="45" y="14" width="227" height="34"/>
                                         <color key="backgroundColor" red="0.90945774319999995" green="0.91751533750000003" blue="0.92987120150000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="PoppinsLatin-Medium" family="Poppins Latin" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="search"/>
@@ -289,14 +289,6 @@
                                             <segue destination="BYZ-38-t0r" kind="show" identifier="goHome" id="UqT-2Q-W3a"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XG2-HG-m68">
-                                        <rect key="frame" x="257" y="24" width="15" height="14"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="XG2-HG-m68" secondAttribute="height" multiplier="15:14" id="1N7-Zl-mYl"/>
-                                            <constraint firstAttribute="height" constant="14" id="N54-uW-yTq"/>
-                                            <constraint firstAttribute="width" constant="15" id="TnJ-4I-aQ9"/>
-                                        </constraints>
-                                    </button>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zSh-rM-tRd">
                                         <rect key="frame" x="58" y="62" width="202" height="32"/>
                                         <segments>
@@ -314,13 +306,11 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="ZbU-UV-sWS" firstAttribute="top" secondItem="Xqi-NW-rtY" secondAttribute="top" constant="14" id="2t6-rq-N4K"/>
-                                    <constraint firstItem="XG2-HG-m68" firstAttribute="leading" secondItem="ZbU-UV-sWS" secondAttribute="trailing" constant="16" id="5TH-cZ-grP"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZbU-UV-sWS" secondAttribute="trailing" constant="16" id="8Qq-zF-B7S"/>
                                     <constraint firstAttribute="bottom" secondItem="zSh-rM-tRd" secondAttribute="bottom" id="EQS-SD-QF0"/>
-                                    <constraint firstItem="XG2-HG-m68" firstAttribute="top" secondItem="Xqi-NW-rtY" secondAttribute="top" constant="24" id="FZj-9k-BTT"/>
                                     <constraint firstItem="zSh-rM-tRd" firstAttribute="top" secondItem="ZbU-UV-sWS" secondAttribute="bottom" constant="14" id="RzY-k8-OOD"/>
                                     <constraint firstItem="FUJ-t3-XVL" firstAttribute="top" secondItem="1Bl-ms-rDK" secondAttribute="bottom" constant="26" id="SKP-TZ-Nc6"/>
                                     <constraint firstItem="1Bl-ms-rDK" firstAttribute="top" secondItem="Xqi-NW-rtY" secondAttribute="top" constant="26" id="WTE-Zz-l6r"/>
-                                    <constraint firstAttribute="trailing" secondItem="XG2-HG-m68" secondAttribute="trailing" constant="16" id="db8-8t-Bda"/>
                                     <constraint firstItem="1Bl-ms-rDK" firstAttribute="leading" secondItem="Xqi-NW-rtY" secondAttribute="leading" constant="16" id="i8q-Sq-13i"/>
                                     <constraint firstAttribute="trailing" secondItem="zSh-rM-tRd" secondAttribute="trailing" constant="28" id="mSi-fX-O2N"/>
                                     <constraint firstItem="FUJ-t3-XVL" firstAttribute="leading" secondItem="Xqi-NW-rtY" secondAttribute="leading" constant="16" id="sqj-z5-GAh"/>
@@ -352,7 +342,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tgs-lA-LCw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="825.89928057553959" y="76.884422110552762"/>
+            <point key="canvasLocation" x="825" y="76.056338028169009"/>
         </scene>
     </scenes>
     <resources>

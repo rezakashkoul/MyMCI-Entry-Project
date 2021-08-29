@@ -19,7 +19,8 @@ class FirstController: UIViewController ,UITextFieldDelegate {
         super.viewDidLoad()
         
         self.usernameTextField.delegate = self
-        
+        //show clear button while you write something
+        usernameTextField.clearButtonMode = .whileEditing
     }
     
     
