@@ -11,11 +11,11 @@ import Alamofire
 
 class ResultController: UIViewController , UITableViewDelegate , UITableViewDataSource {
     
-    var userDetail : [(ownerImage: UIImage , ownerName: String , name: String , stars : Int , forks : Int , watchers : Int , comment : String )] = []
+//    var userDetail : [(ownerImage: UIImage , ownerName: String , name: String , stars : Int , forks : Int , watchers : Int , comment : String )] = []
     
     
     
-    // The variable you searched in the first page
+    // The variable you searched in the first page (for passing Data)
     public var searchedUsername = String()
     
     
@@ -131,6 +131,9 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
             
         }.resume()
         
+        //show clear button while you write something
+        searchField.clearButtonMode = .whileEditing
+
     }
     // Because of UI Designed intentions, I used a custom button to do "back" function
     @IBAction func backPageButton(_ sender: UIButton) {
