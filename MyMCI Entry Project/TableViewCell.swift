@@ -10,23 +10,13 @@ import UIKit
 class TableViewCell: UITableViewCell {
     
     @IBOutlet weak var profileImage: UIImageView!
-    
     @IBOutlet weak var usernameLabel: UILabel!
-    
     @IBOutlet weak var nameLabel: UILabel!
-    
-    
-    
     @IBOutlet weak var numberOfForksLabel: UILabel!
-    
     @IBOutlet weak var numberOfStarsLabel: UILabel!
-    
     @IBOutlet weak var numberOfWatchesLabel: UILabel!
-    
-    
-    
-    
     @IBOutlet weak var commentTextField: UITextField!
+    
     let obj = ResultController()
     
     

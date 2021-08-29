@@ -46,17 +46,3 @@ class ProfileAvatar: Codable {
         
     }
 }
-//
-//func downloadImage(from url: URL) {
-//    print("Download Started")
-//    getData(from: url) { data, response, error in
-//        guard let data = data, error == nil else { return }
-//        print(response?.suggestedFilename ?? url.lastPathComponent)
-//        print("Download Finished")
-//        // always update the UI from the main thread
-//        DispatchQueue.main.async() { [weak self] in
-//            profileImage.image = UIImage(data: data) as? TableViewCell
-//            }
-//        }
-//    }
-//}

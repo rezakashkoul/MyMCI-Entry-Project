@@ -15,10 +15,13 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
     
     
     
-        // The variable you searched in the first page
+    // The variable you searched in the first page
     public var searchedUsername = String()
     
-        //List of results in the array to store and show
+    
+    
+    
+    //List of results in the array to store and show
     var resultArray = [GitHubData]()
     
     
@@ -26,10 +29,20 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
     @IBOutlet weak var resultTableView: UITableView!
     
     
-        //Configuring TableView
+    //Configuring TableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : TableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
         cell.usernameLabel.text = searchedUsername
+        cell.nameLabel.text = fullName
+        //cell.profileImage.text = UIImage(data: resultArray())
+        cell.numberOfForksLabel.text = String(numberOfForks)
+        cell.numberOfStarsLabel.text = String(numberOfStargazers)
+        cell.numberOfWatchesLabel.text = String(numberOfWwatchers)
+        //cell.commentTextField.text = name
+        
+        
+        
+        
         // setting the data got from json here...
         // cell.usernameLabel.text = resultArray[indexPath.row]
         
@@ -39,12 +52,26 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return resultArray.count
-        return resultArray.count
+        return 4
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    //*****************************
+    
+    //These variables are set to bring data back from inner functions of JSON
+    var name = String()
+    var fullName = String()
+    var numberOfForks = Int()
+    var numberOfWwatchers = Int()
+    var numberOfStargazers = Int()
+    //*****************************
+
+    
+    
+    
     
     
     
@@ -52,6 +79,7 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
         super.viewDidLoad()
         
         print("The chosen user name is \(searchedUsername)")
+        
         
         
         resultTableView.dataSource = self
@@ -67,9 +95,8 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
                 self.resultArray = try JSONDecoder().decode([GitHubData].self, from: result!)
                 
                 for gitData in self.resultArray {
-                    
-            
-                    print("""
+                                
+                                        print("""
                     
                     The name is \(gitData.name!) ,
                     The full name is \(gitData.full_name!) ,
@@ -78,6 +105,17 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
                     The stargazers count is \(gitData.stargazers_count)
                     
                     """)
+                    
+                    
+                    
+                    
+                    self.name = gitData.name!
+                    self.fullName = gitData.full_name!
+                    self.numberOfForks = gitData.forks_count
+                    self.numberOfWwatchers = gitData.watchers_count
+                    self.numberOfStargazers = gitData.stargazers_count
+                    
+                    
                     
                     
                     
