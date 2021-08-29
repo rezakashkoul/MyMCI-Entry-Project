@@ -32,7 +32,7 @@ class FirstController: UIViewController ,UITextFieldDelegate {
     
     
     @IBAction func searchButton(_ sender: UIButton) {
-        NotificationCenter.default.post(name: Notification.Name("text"), object: usernameTextField.text)
+
         
         
         let alert = UIAlertController(title: "Empty Field!", message: "Please type a GitHub username", preferredStyle: .alert)
@@ -48,15 +48,26 @@ class FirstController: UIViewController ,UITextFieldDelegate {
 //            guard let vc = storyboard?.instantiateViewController(identifier: "resultPage") as? ResultController else { return }
 //            navigationController?.pushViewController(vc, animated: true)
 //
+            
+            
+            
+            
             performSegue(withIdentifier: "showResult", sender: nil)
-            let enteredUsername : String = usernameTextField.text!
-            print("THIS The USERNAME YOU SEARCHED FOR  \(enteredUsername) ")
+            let _ : String = usernameTextField.text!
+           // print("THIS The USERNAME YOU SEARCHED FOR  \(enteredUsername) ")
             
             
             }
+        
         }
         
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showResult" {
+            let destinationController = segue.destination as! ResultController
+            destinationController.searchedUsername = usernameTextField.text!
+            
+        }
+    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)

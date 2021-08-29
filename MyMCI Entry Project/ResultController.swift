@@ -52,32 +52,28 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
     
     @IBOutlet weak var resultTableView: UITableView!
     
-    var transferdUsername = String()
+    var searchedUsername = String()
     
-    @objc func didGetNotification (_ notification : Notification){
-        let text = notification.object as! String?
-        transferdUsername = text!
-        print("*******\(transferdUsername)******BBB")
-    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("The chosen user name is \(searchedUsername)")
+        
+        
         resultTableView.dataSource = self
         resultTableView.delegate = self
+    
         
-        NotificationCenter.default.addObserver(self, selector: #selector(didGetNotification), name: Notification.Name("text"), object: nil)
-        
-        
-        
-        
-        let url = URL(string: "https://api.github.com/users/reza-kashkoul/repos")
+        let url = URL(string: "https://api.github.com/users/\(searchedUsername)/repos")
         AF.request(url!).response { response in
             let result = response.data
             do {
                 self.resultArray = try JSONDecoder().decode([GitHubData].self, from: result!)
                 
                 for gitData in self.resultArray {
-//                    print(gitData.name!, ":", gitData.full_name!)
+
                     print("""
                     The name is \(gitData.name!) ,
                     The full name is \(gitData.full_name!) ,
@@ -87,19 +83,13 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
                     """)
                     
                     
-                    
-                    
                 }
             } catch  {
                 print("***Error***")
             }
             
             
-            
         }
-        
-    
-        
         
     }
     
@@ -124,8 +114,6 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
     
     @IBAction func FilterSegment(_ sender: UISegmentedControl) {
     }
-    
-    
     
     
     @IBAction func sortDescendingButton(_ sender: UIButton) {
