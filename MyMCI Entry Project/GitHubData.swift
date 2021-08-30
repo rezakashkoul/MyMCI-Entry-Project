@@ -16,7 +16,12 @@ struct GitHubData : Codable {
     var forks_count : Int
     var watchers_count : Int
     let stargazers_count : Int
-    let owner: ProfileAvatar
+    //let owner: GitHubSubData
+    var owner : GitHubSubData
+    
+    
+    
+    
     //avatar_url link is https://avatars.githubusercontent.com/u/31301632?v=4
     
     //let comments_url : String?
@@ -33,7 +38,4 @@ struct GitHubData : Codable {
 //}
 
 
-class ProfileAvatar: Codable {
-    var avatar_url : String?
-        
-}
+

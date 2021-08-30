@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AD6116B4CCD0C547FCCD0065 /* Pods_MyMCI_Entry_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C9F1A4A4B5FDBB1110B6FA /* Pods_MyMCI_Entry_Project.framework */; };
+		F72DF21726DCCCCE00F9AE20 /* GitHubSubData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72DF21626DCCCCE00F9AE20 /* GitHubSubData.swift */; };
 		F73ECDC726D6BE9E00FD51CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73ECDC626D6BE9E00FD51CD /* AppDelegate.swift */; };
 		F73ECDCB26D6BE9E00FD51CD /* FirstController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73ECDCA26D6BE9E00FD51CD /* FirstController.swift */; };
 		F73ECDCE26D6BE9E00FD51CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F73ECDCC26D6BE9E00FD51CD /* Main.storyboard */; };
@@ -16,7 +17,7 @@
 		F77153CE26D7C82D00B6D459 /* PoppinsLatin-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F77153CB26D7C82C00B6D459 /* PoppinsLatin-Medium.ttf */; };
 		F77153CF26D7C82D00B6D459 /* PoppinsLatin-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F77153CC26D7C82D00B6D459 /* PoppinsLatin-Bold.ttf */; };
 		F77153D026D7C82D00B6D459 /* PoppinsLatin-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F77153CD26D7C82D00B6D459 /* PoppinsLatin-Light.ttf */; };
-		F77153D426D8280200B6D459 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77153D326D8280200B6D459 /* Service.swift */; };
+		F77153D426D8280200B6D459 /* GitHubData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77153D326D8280200B6D459 /* GitHubData.swift */; };
 		F77153D626D836E100B6D459 /* ResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77153D526D836E100B6D459 /* ResultController.swift */; };
 		F77153D826D838B000B6D459 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77153D726D838B000B6D459 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -25,6 +26,7 @@
 		2D30BC2D382B74C0580AB0DB /* Pods-MyMCI Entry Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMCI Entry Project.release.xcconfig"; path = "Target Support Files/Pods-MyMCI Entry Project/Pods-MyMCI Entry Project.release.xcconfig"; sourceTree = "<group>"; };
 		37C9F1A4A4B5FDBB1110B6FA /* Pods_MyMCI_Entry_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMCI_Entry_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74D26462F44A6B47AA91AA9F /* Pods-MyMCI Entry Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMCI Entry Project.debug.xcconfig"; path = "Target Support Files/Pods-MyMCI Entry Project/Pods-MyMCI Entry Project.debug.xcconfig"; sourceTree = "<group>"; };
+		F72DF21626DCCCCE00F9AE20 /* GitHubSubData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubSubData.swift; sourceTree = "<group>"; };
 		F73ECDC326D6BE9E00FD51CD /* MyMCI Entry Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyMCI Entry Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F73ECDC626D6BE9E00FD51CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F73ECDCA26D6BE9E00FD51CD /* FirstController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstController.swift; sourceTree = "<group>"; };
@@ -35,7 +37,7 @@
 		F77153CB26D7C82C00B6D459 /* PoppinsLatin-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoppinsLatin-Medium.ttf"; sourceTree = "<group>"; };
 		F77153CC26D7C82D00B6D459 /* PoppinsLatin-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoppinsLatin-Bold.ttf"; sourceTree = "<group>"; };
 		F77153CD26D7C82D00B6D459 /* PoppinsLatin-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoppinsLatin-Light.ttf"; sourceTree = "<group>"; };
-		F77153D326D8280200B6D459 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		F77153D326D8280200B6D459 /* GitHubData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubData.swift; sourceTree = "<group>"; };
 		F77153D526D836E100B6D459 /* ResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultController.swift; sourceTree = "<group>"; };
 		F77153D726D838B000B6D459 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,7 +96,8 @@
 				F73ECDCA26D6BE9E00FD51CD /* FirstController.swift */,
 				F77153D526D836E100B6D459 /* ResultController.swift */,
 				F77153D726D838B000B6D459 /* TableViewCell.swift */,
-				F77153D326D8280200B6D459 /* Service.swift */,
+				F72DF21626DCCCCE00F9AE20 /* GitHubSubData.swift */,
+				F77153D326D8280200B6D459 /* GitHubData.swift */,
 				F73ECDCC26D6BE9E00FD51CD /* Main.storyboard */,
 				F73ECDCF26D6BE9F00FD51CD /* Assets.xcassets */,
 				F73ECDD126D6BE9F00FD51CD /* LaunchScreen.storyboard */,
@@ -224,8 +227,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F77153D826D838B000B6D459 /* TableViewCell.swift in Sources */,
+				F72DF21726DCCCCE00F9AE20 /* GitHubSubData.swift in Sources */,
 				F77153D626D836E100B6D459 /* ResultController.swift in Sources */,
-				F77153D426D8280200B6D459 /* Service.swift in Sources */,
+				F77153D426D8280200B6D459 /* GitHubData.swift in Sources */,
 				F73ECDCB26D6BE9E00FD51CD /* FirstController.swift in Sources */,
 				F73ECDC726D6BE9E00FD51CD /* AppDelegate.swift in Sources */,
 			);
