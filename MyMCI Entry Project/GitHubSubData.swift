@@ -12,9 +12,3 @@ struct GitHubSubData: Codable  {
     var avatar_url : String?
 }
 
-
-
-
-//struct ProfileAvatar: Codable  {
-//    var avatar_url : String?
-//}

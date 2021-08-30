@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Alamofire
 
 class FirstController: UIViewController ,UITextFieldDelegate {
     
@@ -59,7 +58,6 @@ class FirstController: UIViewController ,UITextFieldDelegate {
     }
     
     //Keyboard needed configurations!
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
@@ -79,5 +77,3 @@ class FirstController: UIViewController ,UITextFieldDelegate {
     
     
 }
-
-

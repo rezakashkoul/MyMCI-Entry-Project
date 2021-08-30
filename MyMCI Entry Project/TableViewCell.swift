@@ -11,7 +11,7 @@ class TableViewCell: UITableViewCell {
     
     @IBOutlet weak var profileImage: UIImageView!
     
-  
+    
     
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
@@ -40,6 +40,6 @@ class TableViewCell: UITableViewCell {
         
     }
     
-  
+    
     
 }
