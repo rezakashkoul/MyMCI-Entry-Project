@@ -17,7 +17,7 @@ struct GitHubData : Codable {
     var watchers_count : Int
     let stargazers_count : Int
 //    let owner: GitHubSubData
-    var owner : [GitHubSubData]
+    var owner : GitHubSubData
     
     
     

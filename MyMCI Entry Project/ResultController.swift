@@ -187,7 +187,7 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
     func parse(json: Data) {
         let decoder = JSONDecoder()
         
-        if let gitHUbJson = try? decoder.decode(GitHubSubData.self, from: json) {
+        if let gitHUbJson = try? decoder.decode([GitHubData].self, from: json) {
             resultArray = gitHUbJson
             resultTableView.reloadData()
             
