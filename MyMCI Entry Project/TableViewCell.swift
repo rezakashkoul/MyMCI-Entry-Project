@@ -10,6 +10,9 @@ import UIKit
 class TableViewCell: UITableViewCell {
     
     @IBOutlet weak var profileImage: UIImageView!
+    
+  
+    
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var numberOfForksLabel: UILabel!
@@ -37,6 +40,6 @@ class TableViewCell: UITableViewCell {
         
     }
     
-    
+  
     
 }

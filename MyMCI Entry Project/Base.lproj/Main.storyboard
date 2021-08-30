@@ -249,7 +249,7 @@
                                             <outlet property="numberOfForksLabel" destination="zWn-vY-VaQ" id="fMw-dp-RRN"/>
                                             <outlet property="numberOfStarsLabel" destination="Ua5-Vf-fee" id="Kq1-oj-c9y"/>
                                             <outlet property="numberOfWatchesLabel" destination="0MT-kc-5aI" id="Ha5-MO-B7E"/>
-                                            <outlet property="profileImage" destination="OnB-4q-VB4" id="Nrb-jR-DfY"/>
+                                            <outlet property="profileImage" destination="OnB-4q-VB4" id="5Ts-vT-N1e"/>
                                             <outlet property="usernameLabel" destination="EME-sl-zVi" id="w9r-VD-bk2"/>
                                         </connections>
                                     </tableViewCell>

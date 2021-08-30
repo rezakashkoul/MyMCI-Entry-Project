@@ -13,7 +13,7 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
     
     //    var userDetail : [(ownerImage: UIImage , ownerName: String , name: String , stars : Int , forks : Int , watchers : Int , comment : String )] = []
     
-    
+
     
     // The variable you searched in the first page (for passing Data)
     public var searchedUsername = String()
@@ -29,19 +29,37 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
     @IBOutlet weak var resultTableView: UITableView!
     
     
+    
     //Configuring TableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : TableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
         cell.usernameLabel.text = searchedUsername
         cell.nameLabel.text = fullName
-        //cell.profileImage.text = UIImage(data: resultArray())
+        //cell.profileImage.load(url: ProfileAvatar.) = UIImage(data: resultArray())
+        //cell.configure(url: "https://avatars.githubusercontent.com/u/31301632?v=4")
         cell.numberOfForksLabel.text = String(numberOfForks)
         cell.numberOfStarsLabel.text = String(numberOfStargazers)
         cell.numberOfWatchesLabel.text = String(numberOfWwatchers)
         //cell.commentTextField.text = name
         
+        let urlString = "https://avatars.githubusercontent.com/u/76540607?v=4"
         
-        
+        func fetchImage() {
+            guard let url = URL(string: urlString) else { return }
+            let getDataTask = URLSession.shared.dataTask(with: url) { data, _, error in
+                guard let data = data , error == nil else {
+                    return
+                }
+                DispatchQueue.main.async {
+                    let image = UIImage(data: data)
+                    cell.profileImage.image = image
+                    
+                }
+            }
+            getDataTask.resume()
+        }
+        fetchImage()
+
         
         // setting the data got from json here...
         // cell.usernameLabel.text = resultArray[indexPath.row]
@@ -77,7 +95,6 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         //for locking app appearance to the light mode
         overrideUserInterfaceStyle = .light
 
@@ -88,6 +105,7 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
         resultTableView.dataSource = self
         resultTableView.delegate = self
         
+       
         
         
         //getting data from GitHub API
@@ -96,6 +114,7 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
             let result = response.data
             do {
                 self.resultArray = try JSONDecoder().decode([GitHubData].self, from: result!)
+                var saveResult = self.resultArray
                 
                 for gitData in self.resultArray {
                     
@@ -105,7 +124,8 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
                     The full name is \(gitData.full_name!) ,
                     The forks count is \(gitData.forks_count) ,
                     The watchers count is \(gitData.watchers_count) ,
-                    The stargazers count is \(gitData.stargazers_count)
+                    The stargazers count is \(gitData.stargazers_count),
+                    ******************** Profile Link is
                     
                     """)
                     
@@ -119,10 +139,12 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
                     self.numberOfStargazers = gitData.stargazers_count
                     
                     
-                    
-                    
-                    
                 }
+           
+            
+
+                
+            
             } catch  {
                 print("***Error***" )
                 
@@ -138,6 +160,10 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
         searchField.clearButtonMode = .whileEditing
         
     }
+    
+    
+    
+    
     // Because of UI Designed intentions, I used a custom button to do "back" function
     @IBAction func backPageButton(_ sender: UIButton) {
         
@@ -157,3 +183,4 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
     
     
 }
+
