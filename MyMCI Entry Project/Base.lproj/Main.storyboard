@@ -189,13 +189,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 Stars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ua5-Vf-fee">
-                                                    <rect key="frame" x="160" y="101" width="40" height="17"/>
+                                                    <rect key="frame" x="200" y="101" width="40" height="17"/>
                                                     <fontDescription key="fontDescription" name="PoppinsLatin-Light" family="Poppins Latin" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="145 Watches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0MT-kc-5aI">
-                                                    <rect key="frame" x="212" y="101" width="74" height="17"/>
+                                                    <rect key="frame" x="252" y="101" width="74" height="17"/>
                                                     <fontDescription key="fontDescription" name="PoppinsLatin-Light" family="Poppins Latin" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -213,7 +213,7 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 forks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWn-vY-VaQ">
-                                                    <rect key="frame" x="109.66666666666667" y="101" width="38.333333333333329" height="17"/>
+                                                    <rect key="frame" x="149.66666666666666" y="101" width="38.333333333333343" height="17"/>
                                                     <fontDescription key="fontDescription" name="PoppinsLatin-Light" family="Poppins Latin" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -232,7 +232,7 @@
                                                 <constraint firstItem="mCs-Fu-TfT" firstAttribute="leading" secondItem="4Pw-z1-wi8" secondAttribute="leadingMargin" constant="12" id="Ns8-FZ-aQ5"/>
                                                 <constraint firstItem="lKz-7q-Phg" firstAttribute="leading" secondItem="OnB-4q-VB4" secondAttribute="trailing" constant="12" id="OXF-S2-GGB"/>
                                                 <constraint firstItem="EME-sl-zVi" firstAttribute="leading" secondItem="OnB-4q-VB4" secondAttribute="trailing" constant="12" id="WLh-Y6-Z51"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="0MT-kc-5aI" secondAttribute="trailing" constant="52" id="eV4-oS-vGH"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="0MT-kc-5aI" secondAttribute="trailing" constant="12" id="eV4-oS-vGH"/>
                                                 <constraint firstItem="mCs-Fu-TfT" firstAttribute="top" secondItem="lKz-7q-Phg" secondAttribute="bottom" constant="32" id="fto-Xd-Oks"/>
                                                 <constraint firstItem="EME-sl-zVi" firstAttribute="top" secondItem="4Pw-z1-wi8" secondAttribute="topMargin" constant="32" id="hA4-hv-qhT"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="iBz-Bv-Vix" secondAttribute="bottom" constant="32" id="o5Z-6X-llR"/>

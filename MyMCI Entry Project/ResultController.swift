@@ -30,9 +30,9 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
         let finalResultArray = resultArray[indexPath.row]
         cell.usernameLabel.text = finalResultArray.name
         cell.nameLabel.text = searchedUsername
-        cell.numberOfForksLabel.text = String(finalResultArray.forks_count)
-        cell.numberOfStarsLabel.text = String(finalResultArray.stargazers_count)
-        cell.numberOfWatchesLabel.text = String(finalResultArray.watchers_count)
+        cell.numberOfForksLabel.text = String(finalResultArray.forks_count)  + " Forks"
+        cell.numberOfStarsLabel.text = String(finalResultArray.stargazers_count) + " Stars"
+        cell.numberOfWatchesLabel.text = String(finalResultArray.watchers_count) + " Watches"
         
         //cell.commentTextField.text = name
         
