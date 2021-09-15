@@ -7,12 +7,9 @@
 
 import UIKit
 
-
 let obj = TableViewCell()
-
 class TableViewCell: UITableViewCell {
     
-
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
@@ -21,7 +18,9 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var numberOfWatchesLabel: UILabel!
     @IBOutlet weak var commentTextField: UITextField!
     
-    
+    @IBAction func sendCommentButton(_ sender: UIButton) {
+        sender.resignFirstResponder()
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,26 +29,12 @@ class TableViewCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
         // Configure the view for the selected state
     }
-    
-    
-    @IBAction func sendCommentButton(_ sender: UIButton) {
-        sender.resignFirstResponder()
-        
-    }
-    
-    
 }
 
-
-
-
 extension UIImageView {
-    
     func roundImage()  {
-        
         self.layer.cornerRadius = obj.profileImage.frame.size.width / 2
         self.clipsToBounds = true
         self.layer.borderColor = UIColor.gray.cgColor

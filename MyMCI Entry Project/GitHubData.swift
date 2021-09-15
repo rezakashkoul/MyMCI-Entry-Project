@@ -1,11 +1,5 @@
-//
-//  GitFeed.swift
-//  MyMCI Entry Project
-//
-//  Created by Reza Kashkoul on 6/5/1400 AP.
 
 import Foundation
-
 
 //JSON model to catch the data
 struct GitHubData : Codable {
@@ -15,5 +9,4 @@ struct GitHubData : Codable {
     var watchers_count : Int
     let stargazers_count : Int
     var owner : GitHubSubData
-    
 }
