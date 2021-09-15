@@ -14,6 +14,7 @@ class FirstController: UIViewController ,UITextFieldDelegate {
     @IBOutlet weak var searchImageLogo: UIImageView!
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,10 +24,9 @@ class FirstController: UIViewController ,UITextFieldDelegate {
         //show clear button while you write something
         usernameTextField.clearButtonMode = .whileEditing
     }
-    
-    
-    
     @IBAction func searchButton(_ sender: UIButton) {
+    
+    
         
         //show the alert message!
         let alert = UIAlertController(title: "Empty Field!", message: "Please type a GitHub username", preferredStyle: .alert)
@@ -41,13 +41,19 @@ class FirstController: UIViewController ,UITextFieldDelegate {
             //show the next page!
             performSegue(withIdentifier: "showResult", sender: nil)
             let _ : String = usernameTextField.text!
-            // print("THIS The USERNAME YOU SEARCHED FOR  \(enteredUsername) ")
+            //                let newPage = ResultController()
+            //            self.navigationController?.pushViewController(newPage, animated: true)
+            
+            
             
         }
         
     }
     
     //Transfaring Data from the search field to the other page in order to getting it's data from API.
+    
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showResult" {

@@ -7,12 +7,13 @@
 
 import UIKit
 
+
+let obj = TableViewCell()
+
 class TableViewCell: UITableViewCell {
     
+
     @IBOutlet weak var profileImage: UIImageView!
-    
-    
-    
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var numberOfForksLabel: UILabel!
@@ -20,12 +21,11 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var numberOfWatchesLabel: UILabel!
     @IBOutlet weak var commentTextField: UITextField!
     
-    let obj = ResultController()
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        profileImage.layer.cornerRadius = profileImage.bounds.height/2
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -41,5 +41,18 @@ class TableViewCell: UITableViewCell {
     }
     
     
+}
+
+
+
+
+extension UIImageView {
     
+    func roundImage()  {
+        
+        self.layer.cornerRadius = obj.profileImage.frame.size.width / 2
+        self.clipsToBounds = true
+        self.layer.borderColor = UIColor.gray.cgColor
+        self.layer.borderWidth = 4
+    }
 }

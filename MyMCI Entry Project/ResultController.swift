@@ -9,6 +9,22 @@ import UIKit
 
 class ResultController: UIViewController , UITableViewDelegate , UITableViewDataSource {
     
+    @IBOutlet weak var segmentState: UISegmentedControl!
+    @IBOutlet weak var searchField: UITextField!
+    @IBOutlet weak var resultTableView: UITableView!
+    
+    // Because of UI Designed intentions, I used a custom button to do "back" function
+    @IBAction func backPageButton(_ sender: UIButton) {
+    }
+    
+    // here is the configuration for filter the results
+    @IBAction func FilterSegment(_ sender: UISegmentedControl) {
+        segmentManagement()
+    }
+    
+    //another function for sorting results
+    @IBAction func sortDescendingButton(_ sender: UIButton) {
+    }
     
     // The variable you searched in the first page (for passing Data)
     public var searchedUsername = String()
@@ -17,9 +33,30 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
     //List of results in the array to store and show
     var resultArray = [GitHubData]()
     
-    
-    @IBOutlet weak var searchField: UITextField!
-    @IBOutlet weak var resultTableView: UITableView!
+    func segmentManagement() {
+        if segmentState.selectedSegmentIndex == 0 {
+            //stars
+            resultArray = resultArray.sorted(by: { githubValue1, githubValue2 in
+                githubValue1.stargazers_count < githubValue2.stargazers_count
+            })
+            
+            
+            
+        } else if segmentState.selectedSegmentIndex == 1 {
+            // forks
+            resultArray = resultArray.sorted(by: { githubValue1, githubValue2 in
+                githubValue1.forks_count < githubValue2.forks_count
+            })
+            
+        } else if segmentState.selectedSegmentIndex == 2 {
+            // watches
+            resultArray = resultArray.sorted(by: { githubValue1, githubValue2 in
+                githubValue1.watchers_count < githubValue2.watchers_count
+            })
+        }
+        resultTableView.reloadData()
+
+    }
     
     
     
@@ -74,6 +111,10 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        segmentState.selectedSegmentIndex = 1
+        segmentManagement()
+
         //for locking app appearance to the light mode
         overrideUserInterfaceStyle = .light
         print("The chosen user name is \(searchedUsername)")
@@ -103,15 +144,4 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
     }
     
     
-    // Because of UI Designed intentions, I used a custom button to do "back" function
-    @IBAction func backPageButton(_ sender: UIButton) {
-    }
-    
-    // here is the configuration for filter the results
-    @IBAction func FilterSegment(_ sender: UISegmentedControl) {
-    }
-    
-    //another function for sorting results
-    @IBAction func sortDescendingButton(_ sender: UIButton) {
-    }
 }
