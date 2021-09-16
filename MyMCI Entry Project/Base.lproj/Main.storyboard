@@ -139,7 +139,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fpr-QC-6D3">
-                                <rect key="frame" x="16" y="213" width="358" height="631"/>
+                                <rect key="frame" x="16" y="181" width="358" height="663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="193" id="XlJ-Lb-gj4" customClass="TableViewCell" customModule="MyMCI_Entry_Project" customModuleProvider="target">
@@ -158,20 +158,20 @@
                                                         <constraint firstAttribute="height" constant="64" id="vjN-ar-kZ4"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="git_for_everyone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EME-sl-zVi">
-                                                    <rect key="frame" x="108" y="43" width="144" height="23"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="git_for_everyone" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EME-sl-zVi">
+                                                    <rect key="frame" x="108" y="43" width="218" height="22.666666666666671"/>
                                                     <fontDescription key="fontDescription" name="PoppinsLatin-Medium" family="Poppins Latin" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Send Your Comment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mCs-Fu-TfT">
-                                                    <rect key="frame" x="32" y="132.66666666666666" width="264" height="37.333333333333343"/>
+                                                    <rect key="frame" x="32" y="132.33333333333334" width="264" height="37.666666666666657"/>
                                                     <color key="backgroundColor" red="0.90945774319999995" green="0.91751533750000003" blue="0.92987120150000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="PoppinsLatin-Medium" family="Poppins Latin" pointSize="0.0"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peter Bell" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKz-7q-Phg">
-                                                    <rect key="frame" x="108" y="78" width="149" height="22.666666666666671"/>
+                                                    <rect key="frame" x="108" y="77.666666666666671" width="149" height="22.666666666666671"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="149" id="4qP-ww-GTb"/>
                                                     </constraints>
@@ -180,19 +180,19 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 Stars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ua5-Vf-fee">
-                                                    <rect key="frame" x="200" y="103.66666666666667" width="40" height="17"/>
+                                                    <rect key="frame" x="200" y="103.33333333333333" width="40" height="17"/>
                                                     <fontDescription key="fontDescription" name="PoppinsLatin-Light" family="Poppins Latin" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="145 Watches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0MT-kc-5aI">
-                                                    <rect key="frame" x="252" y="103.66666666666667" width="74" height="17"/>
+                                                    <rect key="frame" x="252" y="103.33333333333333" width="74" height="17"/>
                                                     <fontDescription key="fontDescription" name="PoppinsLatin-Light" family="Poppins Latin" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 forks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWn-vY-VaQ">
-                                                    <rect key="frame" x="149.66666666666666" y="103.66666666666667" width="38.333333333333343" height="17"/>
+                                                    <rect key="frame" x="149.66666666666666" y="103.33333333333333" width="38.333333333333343" height="17"/>
                                                     <fontDescription key="fontDescription" name="PoppinsLatin-Light" family="Poppins Latin" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -222,6 +222,7 @@
                                                 <constraint firstItem="lKz-7q-Phg" firstAttribute="top" secondItem="EME-sl-zVi" secondAttribute="bottom" constant="12" id="MLB-j6-gUh"/>
                                                 <constraint firstItem="mCs-Fu-TfT" firstAttribute="leading" secondItem="4Pw-z1-wi8" secondAttribute="leadingMargin" constant="12" id="Ns8-FZ-aQ5"/>
                                                 <constraint firstItem="lKz-7q-Phg" firstAttribute="leading" secondItem="OnB-4q-VB4" secondAttribute="trailing" constant="12" id="OXF-S2-GGB"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="EME-sl-zVi" secondAttribute="trailing" constant="12" id="Va7-oF-kPJ"/>
                                                 <constraint firstItem="EME-sl-zVi" firstAttribute="leading" secondItem="OnB-4q-VB4" secondAttribute="trailing" constant="12" id="WLh-Y6-Z51"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="0MT-kc-5aI" secondAttribute="trailing" constant="12" id="eV4-oS-vGH"/>
                                                 <constraint firstItem="mCs-Fu-TfT" firstAttribute="top" secondItem="lKz-7q-Phg" secondAttribute="bottom" constant="32" id="fto-Xd-Oks"/>
@@ -246,7 +247,7 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xqi-NW-rtY" userLabel="Inner View">
-                                <rect key="frame" x="16" y="120" width="358" height="93"/>
+                                <rect key="frame" x="16" y="88" width="358" height="93"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. &quot;twostraws&quot;, &quot;Ali&quot;" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZbU-UV-sWS">
                                         <rect key="frame" x="45" y="14" width="297" height="34"/>
@@ -318,7 +319,7 @@
                             <constraint firstItem="Fpr-QC-6D3" firstAttribute="leading" secondItem="dwI-xk-tUn" secondAttribute="leading" constant="16" id="RHn-sI-WFT"/>
                             <constraint firstItem="dwI-xk-tUn" firstAttribute="trailing" secondItem="Fpr-QC-6D3" secondAttribute="trailing" constant="16" id="Wcs-3h-uYj"/>
                             <constraint firstItem="Fpr-QC-6D3" firstAttribute="centerX" secondItem="dwI-xk-tUn" secondAttribute="centerX" id="fZE-Ml-l1r"/>
-                            <constraint firstItem="Xqi-NW-rtY" firstAttribute="top" secondItem="dwI-xk-tUn" secondAttribute="top" constant="32" id="kWT-As-HfE"/>
+                            <constraint firstItem="Xqi-NW-rtY" firstAttribute="top" secondItem="dwI-xk-tUn" secondAttribute="top" id="kWT-As-HfE"/>
                             <constraint firstItem="Xqi-NW-rtY" firstAttribute="centerX" secondItem="dwI-xk-tUn" secondAttribute="centerX" id="nXb-Cj-7jD"/>
                             <constraint firstItem="Fpr-QC-6D3" firstAttribute="top" secondItem="Xqi-NW-rtY" secondAttribute="bottom" id="vDm-1a-11d"/>
                         </constraints>

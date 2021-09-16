@@ -12,13 +12,14 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
     @IBOutlet weak var searchField: UITextField!
     @IBOutlet weak var resultTableView: UITableView!
     @IBAction func backPageButton(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
     @IBAction func FilterSegment(_ sender: UISegmentedControl) {
         segmentManagement()
     }
     @IBAction func sortDescendingButton(_ sender: UIButton) {
     }
-    public var searchedUsername = String()
+    var searchedUsername = String()
     var resultArray = [GitHubData]()
     
     func segmentManagement() {
@@ -75,9 +76,20 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    // Hide the navigation bar on the this view controller
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: !animated)
+    }
+    // Show the navigation bar on other view controllers
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: !animated)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //        self.navigationController?.isNavigationBarHidden = true
         segmentState.selectedSegmentIndex = 1
         segmentManagement()
         overrideUserInterfaceStyle = .light

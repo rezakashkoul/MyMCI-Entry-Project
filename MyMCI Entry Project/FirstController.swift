@@ -17,11 +17,9 @@ class FirstController: UIViewController ,UITextFieldDelegate {
         if usernameTextField.text == "" {
             present(alert, animated: true)
         } else {
-            //show the next page!
-            //  performSegue(withIdentifier: "showResult", sender: nil)
-            //      let _ : String = usernameTextField.text!
-            let newPage = self.storyboard?.instantiateViewController(identifier: "resultPage") as! ResultController
-            self.navigationController?.pushViewController(newPage, animated: true)
+            let newPage = storyboard?.instantiateViewController(identifier: "resultPage") as! ResultController
+            newPage.searchedUsername = self.usernameTextField.text!
+            navigationController?.pushViewController(newPage, animated: true)
         }
     }
     
@@ -32,13 +30,6 @@ class FirstController: UIViewController ,UITextFieldDelegate {
         self.usernameTextField.delegate = self
         //show clear button while you write something
         usernameTextField.clearButtonMode = .whileEditing
-    }
-    //Transfaring Data from the search field to the other page in order to getting it's data from API.
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showResult" {
-            let destinationController = segue.destination as! ResultController
-            destinationController.searchedUsername = usernameTextField.text!
-        }
     }
     //Keyboard needed configurations!
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
