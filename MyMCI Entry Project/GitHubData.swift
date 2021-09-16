@@ -1,4 +1,3 @@
-
 import Foundation
 
 //JSON model to catch the data

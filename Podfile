@@ -6,6 +6,6 @@ target 'MyMCI Entry Project' do
 use_frameworks!
 
   # Pods for MyMCI Entry Project
-pod 'Alamofire', '~> 5.4'
+#pod 'Alamofire', '~> 5.4'
 
 end

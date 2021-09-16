@@ -4,7 +4,6 @@
 //
 //  Created by Reza Kashkoul on 6/5/1400 AP.
 //
-
 import UIKit
 
 class ResultController: UIViewController , UITableViewDelegate , UITableViewDataSource {
@@ -12,19 +11,14 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
     @IBOutlet weak var segmentState: UISegmentedControl!
     @IBOutlet weak var searchField: UITextField!
     @IBOutlet weak var resultTableView: UITableView!
-    // Because of UI Designed intentions, I used a custom button to do "back" function
     @IBAction func backPageButton(_ sender: UIButton) {
     }
-    // here is the configuration for filter the results
     @IBAction func FilterSegment(_ sender: UISegmentedControl) {
         segmentManagement()
     }
-    //another function for sorting results
     @IBAction func sortDescendingButton(_ sender: UIButton) {
     }
-    // The variable you searched in the first page (for passing Data)
     public var searchedUsername = String()
-    //List of results in the array to store and show
     var resultArray = [GitHubData]()
     
     func segmentManagement() {
@@ -46,7 +40,7 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
         }
         resultTableView.reloadData()
     }
-    //Configuring TableView
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : TableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
         let finalResultArray = resultArray[indexPath.row]
@@ -55,7 +49,6 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
         cell.numberOfForksLabel.text = String(finalResultArray.forks_count)  + " Forks"
         cell.numberOfStarsLabel.text = String(finalResultArray.stargazers_count) + " Stars"
         cell.numberOfWatchesLabel.text = String(finalResultArray.watchers_count) + " Watches"
-        //Configuring Image materials
         
         let urlString = finalResultArray.owner.avatar_url!
         func fetchImage() {
@@ -76,8 +69,6 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return resultArray.count
-        //just for test!
         return resultArray.count
     }
     
@@ -89,10 +80,8 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
         super.viewDidLoad()
         segmentState.selectedSegmentIndex = 1
         segmentManagement()
-        //for locking app appearance to the light mode
         overrideUserInterfaceStyle = .light
         print("The chosen user name is \(searchedUsername)")
-        //show clear button while you write something
         searchField.clearButtonMode = .whileEditing
         resultTableView.dataSource = self
         resultTableView.delegate = self
@@ -107,7 +96,6 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
     
     func parse(json: Data) {
         let decoder = JSONDecoder()
-        
         if let gitHUbJson = try? decoder.decode([GitHubData].self, from: json) {
             resultArray = gitHUbJson
             resultTableView.reloadData()

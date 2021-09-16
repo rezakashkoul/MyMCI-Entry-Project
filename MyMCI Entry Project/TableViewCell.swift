@@ -4,7 +4,6 @@
 //
 //  Created by Reza Kashkoul on 6/5/1400 AP.
 //
-
 import UIKit
 
 let obj = TableViewCell()
@@ -17,7 +16,6 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var numberOfStarsLabel: UILabel!
     @IBOutlet weak var numberOfWatchesLabel: UILabel!
     @IBOutlet weak var commentTextField: UITextField!
-    
     @IBAction func sendCommentButton(_ sender: UIButton) {
         sender.resignFirstResponder()
     }
@@ -32,6 +30,7 @@ class TableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 }
+
 
 extension UIImageView {
     func roundImage()  {

@@ -120,7 +120,6 @@
 				F73ECDBF26D6BE9E00FD51CD /* Sources */,
 				F73ECDC026D6BE9E00FD51CD /* Frameworks */,
 				F73ECDC126D6BE9E00FD51CD /* Resources */,
-				51D50501A9A2E59B5DEC621B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -180,23 +179,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		51D50501A9A2E59B5DEC621B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyMCI Entry Project/Pods-MyMCI Entry Project-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyMCI Entry Project/Pods-MyMCI Entry Project-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyMCI Entry Project/Pods-MyMCI Entry Project-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		D2B7AEA740974594D2FC4A64 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

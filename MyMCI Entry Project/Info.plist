@@ -43,5 +43,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>PoppinsLatin-Light</string>
+		<string>PoppinsLatin-Medium</string>
+		<string>PoppinsLatin-Bold</string>
+	</array>
 </dict>
 </plist>
