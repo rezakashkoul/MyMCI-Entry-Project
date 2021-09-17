@@ -24,7 +24,7 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
     
     func directSearch() {
         searchedUsername = searchField.text!
-        gettingDataFromApi()
+        getDataFromApi()
         resultTableView.reloadData()
     }
     
@@ -112,10 +112,10 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
         resultTableView.dataSource = self
         resultTableView.delegate = self
         //***Getting Data from API***
-        gettingDataFromApi()
+        getDataFromApi()
     }
     
-    func gettingDataFromApi() {
+    func getDataFromApi() {
         let urlString =  "https://api.github.com/users/\(searchedUsername)/repos"
         if let url = URL(string: urlString) {
             if let data = try? Data(contentsOf: url) {
