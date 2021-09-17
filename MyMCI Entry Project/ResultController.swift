@@ -6,7 +6,7 @@
 //
 import UIKit
 
-class ResultController: UIViewController , UITableViewDelegate , UITableViewDataSource {
+class ResultController: UIViewController , UITableViewDelegate , UITableViewDataSource , UITextFieldDelegate {
     
     @IBOutlet weak var segmentState: UISegmentedControl!
     @IBOutlet weak var searchField: UITextField!
@@ -21,6 +21,18 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
     }
     var searchedUsername = String()
     var resultArray = [GitHubData]()
+    
+    func directSearch() {
+        searchedUsername = searchField.text!
+        gettingDataFromApi()
+        resultTableView.reloadData()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        searchField.resignFirstResponder()
+        directSearch()
+        return true
+    }
     
     func segmentManagement() {
         if segmentState.selectedSegmentIndex == 0 {
@@ -89,15 +101,21 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        self.navigationController?.isNavigationBarHidden = true
+        
+        print("The chosen user name is \(searchedUsername)")
         segmentState.selectedSegmentIndex = 1
         segmentManagement()
         overrideUserInterfaceStyle = .light
-        print("The chosen user name is \(searchedUsername)")
+        resultTableView.keyboardDismissMode = .onDrag
         searchField.clearButtonMode = .whileEditing
+        searchField.delegate = self
         resultTableView.dataSource = self
         resultTableView.delegate = self
         //***Getting Data from API***
+        gettingDataFromApi()
+    }
+    
+    func gettingDataFromApi() {
         let urlString =  "https://api.github.com/users/\(searchedUsername)/repos"
         if let url = URL(string: urlString) {
             if let data = try? Data(contentsOf: url) {
