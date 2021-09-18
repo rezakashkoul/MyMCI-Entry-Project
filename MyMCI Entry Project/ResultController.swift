@@ -106,6 +106,7 @@ class ResultController: UIViewController , UITableViewDelegate , UITableViewData
         segmentState.selectedSegmentIndex = 1
         segmentManagement()
         overrideUserInterfaceStyle = .light
+        resultTableView.showsVerticalScrollIndicator = false
         resultTableView.keyboardDismissMode = .onDrag
         searchField.clearButtonMode = .whileEditing
         searchField.delegate = self
