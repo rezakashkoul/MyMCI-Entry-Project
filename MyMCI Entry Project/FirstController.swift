@@ -27,6 +27,7 @@ class FirstController: UIViewController ,UITextFieldDelegate {
         super.viewDidLoad()
         //for locking app appearance to the light mode
         overrideUserInterfaceStyle = .light
+        
         self.usernameTextField.delegate = self
         //show clear button while you write something
         usernameTextField.clearButtonMode = .whileEditing
